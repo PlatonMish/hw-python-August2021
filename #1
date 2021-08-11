@@ -1,0 +1,109 @@
+#1) У вас есть переменная my_str, тип - str. И переменная my_symbol, тип - str.
+#Напечатать ЧИСЛО сколько раз my_symbol встречается в my_str.
+#Пример:  my_str="blablacar", my_symbol="bla".
+#Вывод на экран: 2
+print("Задания №1")
+print("#########################")
+
+my_str = "blablabla"
+print(my_str)
+my_symbol = "bla"
+print(my_symbol)
+
+print(my_str.count(my_symbol))
+
+
+#2) У вас есть переменная my_str, тип - str. Напечатать ЧИСЛО сколько
+#РАЗНЫХ символов встречается в my_str.
+#Большая и маленькая буква считается как один символ.
+#Пробелы, запятые и т.д. считаем тоже как символы.
+#Пример:  my_str="bla BLA car".
+#Вывод на экран: 6
+print("Задания №2")
+print("#########################")
+
+my_str = "bla,cAr!"
+print(my_str)
+count = len(my_str)
+
+for i in my_str:
+    if my_str[0:len(my_str)] >= "a" and my_str[0:len(my_str)] <= "z":
+        for i in my_str:
+            if my_str[0:len(my_str)] >= "A" and my_str[0:len(my_str)] <= "Z":
+                count =- 1
+
+print(count)
+
+
+#3) Дана строка my_str и пустой список my_list.
+#Заполнить my_list символами из my_str,
+#которые стоят на четных местах в строке (считаем с 0)
+print("Задания №3")
+print("#########################")
+
+my_str = "Geeks for Geeks"
+print(my_str)
+my_list_copy = []
+
+def Convert(string):
+    my_list_copy = list(string.split(" "))
+    for elem in my_list_copy:
+#        if my_list_copy[i] % 2 == 0:
+            my_list = my_list_copy
+    return my_list
+
+
+
+print(Convert(my_str))
+
+
+#4) Дано целое число (int). Определить сколько цифр в этом числе.
+print("Задания №4")
+print("#########################")
+int = 123456789
+print(int)
+
+def numLen(num):
+  return len(str(abs(num)))
+
+print(numLen(int))
+
+#5) Дано целое число. Определить наибольшую цифру в этом числе.
+print("Задания №5")
+print("#########################")
+
+numbeer = 17349
+print(numbeer)
+
+m = numbeer%10
+a = numbeer//10
+while a > 0:
+    if a%10 > m:
+        m = a%10
+    a = a//10
+print(m)
+
+#6) Дано целое число. Составить число (int) с цифрами в обратном порядке.
+print("Задания №6")
+print("#########################")
+
+
+def reverse(num):
+   rev=0
+   while(num>0):
+      digit=num%10
+      rev=(rev*10)+digit
+      num=num//10
+   return rev
+num=12345
+print(reverse(num))
+
+#7) Дано целое число. Составить число (int) с цифрами в порядке возрастания(убывания).
+print("Задания №7")
+print("#########################")
+
+numbeer = 7493023
+descending = "".join(sorted(str(numbeer), reverse=True))
+print(descending)
+ascending = "".join(sorted(str(numbeer)))
+print(ascending)
